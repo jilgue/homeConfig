@@ -1,3 +1,5 @@
+(setq line-move-visual nil) ;; texto en varias lineas
+(setq make-backup-files nil) ;; no crea los ficheros "foo.bar~" 
 (server-start)
 (desktop-save-mode 1)
 
@@ -9,14 +11,16 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 
 (setq org-todo-keywords
-     '((sequence "TODO(t@/!)" "WORKING(w@/!)" "DONE(d!)")
-        (sequence "PAUSED(p!)" "WAITING(i@/!)" "CANCELED(c!)")))
+     '((sequence "TODO(t@/!)" "REPLY(r@/!)" "WORKING(w@/!)" "PendingValidation(v!)" "DONE(d!)")
+        (sequence "PAUSED(p!)" "WAITING(i@/!)" "CLOSED(c!)")))
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning)
+	("REPLY" . org-warning)
         ("WORKING" . "black")
         ("WAITING" . "blue")
         ("PAUSED" . "blue")
-        ("CANCELED" . (:foreground "blue" :weight bold))))
+	("PendingValidation" . ("green" :weight bold))
+        ("CLOSE" . (:foreground "black" :weight bold))))
 
 (autoload 'php-mode "php-mode" "Major mode for editing php code." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
