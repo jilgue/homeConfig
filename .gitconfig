@@ -1,0 +1,14 @@
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = auto
+[alias]
+        ci = commit
+        co = checkout
+        st = status
+        di = diff
+        br = branch
+[user]
+        name = César Martín Cristóbal
+        email = jilgue@gmail.com

@@ -1,0 +1,20 @@
+remove lock = Caps_Lock
+remove control = Control_L
+!remove prior = KP_Prior
+!remove next = KP_Next
+!remove home = KP_Home
+!remove end = KP_End
+
+keycode	66 = Control_L
+keycode	37 = Caps_Lock
+!keycode	81 = KP_Home
+!keycode	89 = KP_End
+!keycode	79 = KP_Prior
+!keycode	87 = KP_Next
+
+add Control = Control_L
+add lock = Caps_Lock
+!add prior = KP_Prior
+!add next = KP_Next
+!add home = KP_Home
+!add end = KP_End

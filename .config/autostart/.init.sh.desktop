@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/cesar/.init.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[es_ES]=init
+Name=init
+Comment[es_ES]=
+Comment=
+X-GNOME-Autostart-Delay=0
