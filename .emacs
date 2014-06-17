@@ -1,10 +1,13 @@
-(setq line-move-visual nil) ;; texto en varias lineas
 (setq make-backup-files nil) ;; no crea los ficheros "foo.bar~" 
 (server-start)
 (desktop-save-mode 1)
 
 ;(require 'ido)
 (ido-mode t)
+
+(show-paren-mode t)
+
+(global-visual-line-mode 1) ;; texto en varias lineas
 
 (autoload #'espresso-mode "espresso" "Start espresso-mode" t)
 (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
