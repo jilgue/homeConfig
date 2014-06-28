@@ -1,9 +1,9 @@
 #emacs
 bindkey -e
-bindkey '^[[5D' emacs-backward-word
-bindkey '^[[5C' emacs-forward-word
-bindkey ';5D' emacs-backward-word
-bindkey ';5C' emacs-forward-word
+bindkey '^[[5D' backward-word
+bindkey '^[[5C' forward-word
+bindkey ';5D' backward-word
+bindkey ';5C' forward-word
 
 
 # Skip all this for non-interactive shells
@@ -12,6 +12,9 @@ bindkey ';5C' emacs-forward-word
 autoload -U compinit promptinit
 compinit
 promptinit
+
+autoload -U select-word-style
+select-word-style bash
 
 # This will set the default prompt to the walters theme
 prompt walters
