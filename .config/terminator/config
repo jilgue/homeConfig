@@ -1,0 +1,47 @@
+[global_config]
+  title_transmit_bg_color = "#0041c8"
+  title_receive_fg_color = "#000000"
+  tab_position = bottom
+  title_transmit_fg_color = "#000000"
+  borderless = True
+[keybindings]
+  cycle_prev = <Shift>Down
+  close_window = <Super>q
+  broadcast_all = <Super>a
+  rotate_ccw = None
+  reset_clear = None
+  scaled_zoom = None
+  hide_window = None
+  prev_tab = <Shift>Left
+  cycle_next = <Shift>Up
+  broadcast_off = <Super>o
+  broadcast_group = <Super>b
+  go_prev = None
+  close_term = <Super>w
+  go_next = None
+  new_tab = <Primary><Shift>t
+  copy = <Super>c
+  paste = <Super>v
+  reset = None
+  search = None
+  rotate_cw = None
+  next_tab = <Shift>Right
+  move_tab_right = <Shift><Alt>Right
+  move_tab_left = <Shift><Alt>Left
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = Monospace 11
+    background_color = "#ffffff"
+    background_image = None
+    foreground_color = "#000000"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
