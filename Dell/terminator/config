@@ -1,0 +1,182 @@
+[global_config]
+  title_transmit_fg_color = "#000000"
+  suppress_multiple_term_dialog = True
+  borderless = True
+  title_transmit_bg_color = "#0041c8"
+  title_receive_fg_color = "#000000"
+  tab_position = bottom
+[keybindings]
+  cycle_prev = <Shift>Down
+  close_window = <Super>q
+  broadcast_all = <Super>a
+  rotate_ccw = None
+  reset_clear = None
+  toggle_zoom = <Primary><Shift>z
+  scaled_zoom = None
+  hide_window = None
+  prev_tab = <Shift>Left
+  cycle_next = <Shift>Up
+  broadcast_off = <Super>o
+  broadcast_group = <Super>b
+  go_prev = None
+  close_term = <Super>w
+  go_next = None
+  new_tab = <Primary><Shift>t
+  copy = <Super>c
+  paste = <Super>v
+  reset = None
+  search = None
+  rotate_cw = None
+  next_tab = <Shift>Right
+  move_tab_right = <Shift><Alt>Right
+  move_tab_left = <Shift><Alt>Left
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = Monospace 11
+    background_image = None
+    foreground_color = "#000000"
+    copy_on_selection = True
+    background_color = "#ffffff"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[emacs]]
+    [[[child0]]]
+      position = 0:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 1280, 800
+    [[[child1]]]
+      labels = None, None, None, None
+      type = Notebook
+      order = 0
+      parent = child0
+    [[[terminal1]]]
+      profile = default
+      command = /home/cmartin/.config/terminator/sshfsEmacs.sh
+      type = Terminal
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      command = ""
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal3]]]
+      profile = default
+      command = /home/cmartin/.config/terminator/sshdev03.sh
+      type = Terminal
+      order = 3
+      parent = child1
+    [[[terminal4]]]
+      profile = default
+      command = ssh bbdev03
+      type = Terminal
+      order = 2
+      parent = child1
+  [[eldiario]]
+    [[[child0]]]
+      position = 0:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 1280, 800
+    [[[child1]]]
+      position = 616
+      type = VPaned
+      order = 0
+      parent = child0
+    [[[child2]]]
+      position = 640
+      type = HPaned
+      order = 0
+      parent = child1
+    [[[child3]]]
+      position = 218
+      type = VPaned
+      order = 0
+      parent = child2
+    [[[child5]]]
+      position = 198
+      type = VPaned
+      order = 1
+      parent = child3
+    [[[child8]]]
+      position = 218
+      type = VPaned
+      order = 1
+      parent = child2
+    [[[child10]]]
+      position = 198
+      type = VPaned
+      order = 1
+      parent = child8
+    [[[terminal11]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child10
+    [[[terminal13]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child1
+    [[[terminal12]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child10
+    [[[terminal4]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child3
+    [[[terminal7]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child5
+    [[[terminal6]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child5
+    [[[terminal9]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child8
+  [[newdevel]]
+    [[[child0]]]
+      position = 0:800
+      type = Window
+      order = 0
+      parent = ""
+      size = 1280, 775
+    [[[child1]]]
+      position = 640
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[terminal3]]]
+      profile = default
+      command = ssh root@centos
+      type = Terminal
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      command = ssh root@centos
+      type = Terminal
+      order = 0
+      parent = child1
+[plugins]
