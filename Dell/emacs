@@ -1,0 +1,50 @@
+(setq make-backup-files nil) ;; no crea los ficheros "foo.bar~" 
+(server-start)
+(desktop-save-mode 1)
+
+;(require 'ido)
+(ido-mode t)
+
+(show-paren-mode t)
+
+(global-visual-line-mode 1) ;; texto en varias lineas
+
+(setq tab-width 8)
+(setq c-basic-offset 8)
+
+(require 'ibuffer)
+(global-set-key "\C-x\C-b" 'ibuffer)
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+
+(autoload 'apache-mode "apache-mode.el" "Apache conf mode." t)
+(add-to-list 'auto-mode-alist '("\\apache2.conf*" . apache-mode))
+
+(autoload 'html-mode "html-mode" "Start html-mode" t)
+(add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
+
+(setq org-todo-keywords
+     '((sequence "TODO(t@/!)" "TOSEND(o/!)" "WORKING(w@/!)" "DONE(d!)")
+        (sequence "PAUSED(p!)" "WAITING(i@/!)" "PendingValidation(v!)" "SUBIR(s!)")))
+(setq org-todo-keyword-faces
+      '(("TODO" . org-warning)
+	("TOSEND" . org-warning)
+        ("WORKING" . "black")
+        ("WAITING" . "blue")
+        ("PAUSED" . "blue")
+	("PendingValidation" . "green")
+	("SUBIR" . "green")))
+
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/auto-complete")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/usr/share/emacs/site-lisp/auto-complete/dict")
+(ac-config-default)
+
+(add-to-list 'load-path "~/.emacs.d/packages")
+(require 'yasnippet-bundle)
+(setq yas/root-directory "~/.emacs.d/snippets")
+(yas/load-directory "~/.emacs.d/snippets")
