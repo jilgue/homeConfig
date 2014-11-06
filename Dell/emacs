@@ -24,8 +24,8 @@
 (autoload 'apache-mode "apache-mode.el" "Apache conf mode." t)
 (add-to-list 'auto-mode-alist '("\\apache2.conf*" . apache-mode))
 
-(autoload 'html-mode "html-mode" "Start html-mode" t)
-(add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
+(autoload 'sgml-mode "sgml-mode" "Start sgml-mode" t)
+(add-to-list 'auto-mode-alist '("\\.tpl$" . sgml-mode))
 
 (setq org-todo-keywords
      '((sequence "TODO(t@/!)" "TOSEND(o/!)" "WORKING(w@/!)" "DONE(d!)")
